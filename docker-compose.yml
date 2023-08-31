@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  api:
+    image: acmecorp-api
+    build: .
+    ports:
+      - 8080:80
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: password
+      MSSQL_DATABASE: acmecorp
+  test:
+    image: acmecorp-api-test
+    build: .
+    depends_on:
+      - api
+      - db
