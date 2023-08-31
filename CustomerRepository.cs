@@ -1,5 +1,4 @@
-﻿using Assessment.Controllers;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Assessment
 {

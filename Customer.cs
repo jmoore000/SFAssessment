@@ -1,4 +1,4 @@
-﻿namespace Assessment.Controllers
+﻿namespace Assessment
 {
     public class Customer
     {
